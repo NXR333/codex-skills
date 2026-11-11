@@ -1,0 +1,32 @@
+{
+  "files": {
+    "CHANGELOG.md": "881a811e9324e6dcbd53fa931b591b76654ed368a6955489936ac1abff5dd20d",
+    "SKILL.md": "911911fc1427637541e11a9405b1d3c702b7370ba76a9634989291bdbb319210",
+    "agents/openai.yaml": "c44899c5ca53cfedc6679a4d82cd1398735d650a17639a30da453baea66b1041",
+    "references/checklist.md": "59d79e36b852a86911f8e77dd904f0f4e51f3fad6fc8f3d347221b2e2fcce44d",
+    "references/formatting.md": "6571ada515594b526bcfad8977552685b8eda603756ab79f200a17448f617a79",
+    "references/project.md": "c5499a64c2d24de4dd3e1fa3355aa96df724dd20fddc597e4933d955b0b18699",
+    "references/sources.md": "48d0f18a3a08a92d65b704005a0ffa2f904d4467958db632135a14df9aa4b6a9",
+    "references/structure.md": "2e000fb0e941db9341cb37690fad4248b0345a56aceb5172d6d9aefc1703dd10",
+    "references/technical-specification.md": "56284374aa1125ef01c3fbd428bf76cba460cb06872dfe654264841fa6865f21",
+    "references/templates.md": "54a5390d91094678ee1d018ca41b3b77f4027b47f75d37dbebb66ac203fa2a40",
+    "scripts/check_version.py": "6f09452838b396eaddd75170996331124dad437666cd95b0eb36537475096068",
+    "sources/Методичка_по_курсовому_МДК_05_02_09_02_07_ИС.docx": "87f8ef08fceb8edd1b2235b977b4a649a81ab99e141c4f5b23a8a2f014d94c64",
+    "sources/Новый шрифт для документов/LICENSE-Liberation.txt": "93fed46019c38bbe566b479d22148e2e8a1e85ada614accb0211c37b2c61c19b",
+    "sources/Новый шрифт для документов/liberation-fonts-ttf-2.1.5.zip": "cc5827fd240e6dbec6dd4437d129a98e745fb660003fad664e467333dd229c9c",
+    "sources/Новый шрифт для документов/Установка шрифта Liberation Serif для документов.docx": "bf59b99bc20325673edd16c34e3132aa52ee72f9b338b3814e2f856ff3e53a53",
+    "sources/Новый шрифт для документов/Установка шрифта Windiws.docx": "c5af9be0b20af4d04ef3b2567f8d0fd7c0d49b1ee918ca63371a4b245b230d1c",
+    "sources/Пример оформления 2.1 Основание для разработки.txt": "d2ee93cca620ebf0446b766efd003cbbdf2e50189eaeeb753ba4a469289fa06e",
+    "sources/Пункты ТЗ по ГОСТ 19.201-78.txt": "19773638df36a50067ef6ea5e140e5c3eddcaf64fcd801dcfbfe0cb15c0c61bb",
+    "sources/Содержание пояснительной записки.docx": "92a01e635edc10c5357358d27fc55a6ff2c6f7a639c4a23459a9e027f86863ad",
+    "sources/Тест-кейс.docx": "43e9e631213eb03e3f9d3e55e947ab6bc56581ec3f9d177ca95de82e20af7320",
+    "sources/Титульник для КП МДК 05.02.docx": "19862bb33274dd848fa581f953063b0bb34cf257332e51b11f6ac3e28262a356",
+    "sources/Тутор в0.2.docx": "fc7d4f6d185214c031775707dd550259f1ce347abdeece154d22f4095cb8aa23",
+    "sources/Установщик Sql.txt": "d1ac1483be50f92749543c6b191ef052af320eef87ab07e060362d3fc7d863e7"
+  },
+  "name": "coursework-word",
+  "released_at": "2026-11-12",
+  "repository": "NXR333/codex-skills",
+  "schema": 1,
+  "version": "1.0.0"
+}

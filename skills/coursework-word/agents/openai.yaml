@@ -1,0 +1,4 @@
+interface:
+  display_name: "Курсовая в Word"
+  short_description: "Курсовая МДК.05.02: текст, оформление и проверка"
+  default_prompt: "Используй $coursework-word для подготовки и оформления моей курсовой в Word по методичкам, включённым в скилл."

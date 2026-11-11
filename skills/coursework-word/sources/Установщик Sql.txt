@@ -1,0 +1,1 @@
+https://learn.microsoft.com/ru-ru/ssms/install/install?redirectedfrom=MSDN&view=sql-server-ver15

@@ -1,0 +1,10 @@
+* text=auto
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.pdf binary
+*.docx binary
+*.png binary
+*.zip binary
+skills/** -text

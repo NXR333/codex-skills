@@ -1,0 +1,4 @@
+interface:
+  display_name: "Диаграммы для курсовых"
+  short_description: "Построение и проверка IDEF0, DFD и UML"
+  default_prompt: "Примени $coursework-diagrams и построй диаграммы по материалам проекта и методичкам."
