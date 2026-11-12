@@ -1,7 +1,7 @@
 {
   "files": {
-    "CHANGELOG.md": "881a811e9324e6dcbd53fa931b591b76654ed368a6955489936ac1abff5dd20d",
-    "SKILL.md": "911911fc1427637541e11a9405b1d3c702b7370ba76a9634989291bdbb319210",
+    "CHANGELOG.md": "b7f89841098230a3c09eab1769b91cee02089991a8fe30be6fc1bdf4f327bd8d",
+    "SKILL.md": "4c5c5f24d3a845b92356142c771a42c062da7bdd1f72bdfae1c335ac0a0d82af",
     "agents/openai.yaml": "c44899c5ca53cfedc6679a4d82cd1398735d650a17639a30da453baea66b1041",
     "references/checklist.md": "59d79e36b852a86911f8e77dd904f0f4e51f3fad6fc8f3d347221b2e2fcce44d",
     "references/formatting.md": "6571ada515594b526bcfad8977552685b8eda603756ab79f200a17448f617a79",
@@ -10,7 +10,7 @@
     "references/structure.md": "2e000fb0e941db9341cb37690fad4248b0345a56aceb5172d6d9aefc1703dd10",
     "references/technical-specification.md": "56284374aa1125ef01c3fbd428bf76cba460cb06872dfe654264841fa6865f21",
     "references/templates.md": "54a5390d91094678ee1d018ca41b3b77f4027b47f75d37dbebb66ac203fa2a40",
-    "scripts/check_version.py": "6f09452838b396eaddd75170996331124dad437666cd95b0eb36537475096068",
+    "scripts/check_version.py": "12f0fbf76a1258844c881c78b9252e13a5c4ac1da930c10ecdd98603441c986e",
     "sources/Методичка_по_курсовому_МДК_05_02_09_02_07_ИС.docx": "87f8ef08fceb8edd1b2235b977b4a649a81ab99e141c4f5b23a8a2f014d94c64",
     "sources/Новый шрифт для документов/LICENSE-Liberation.txt": "93fed46019c38bbe566b479d22148e2e8a1e85ada614accb0211c37b2c61c19b",
     "sources/Новый шрифт для документов/liberation-fonts-ttf-2.1.5.zip": "cc5827fd240e6dbec6dd4437d129a98e745fb660003fad664e467333dd229c9c",
@@ -28,5 +28,5 @@
   "released_at": "2026-11-12",
   "repository": "NXR333/codex-skills",
   "schema": 1,
-  "version": "1.0.0"
+  "version": "1.0.1"
 }

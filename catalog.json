@@ -1,23 +1,23 @@
 {
-  "collection_version": "1.0.0",
+  "collection_version": "1.0.1",
   "repository": "NXR333/codex-skills",
   "schema": 1,
   "skills": {
     "coursework-diagrams": {
-      "archive": "coursework-diagrams-1.0.0.zip",
-      "archive_sha256": "92afc954aa76f03f75d3c77054ec169c8bf2161a63305a868d7557ce6773866a",
-      "archive_url": "https://github.com/NXR333/codex-skills/releases/download/v1.0.0/coursework-diagrams-1.0.0.zip",
-      "manifest_sha256": "4b39395370b08cec3ed2bb6dc9cbe3919d65d218beb404dbcd08a5ba8667e876",
+      "archive": "coursework-diagrams-1.0.1.zip",
+      "archive_sha256": "eef54de81ef0ee0639568b5127010d7dac9f7eb662f9ef92106c71d735f2ba35",
+      "archive_url": "https://github.com/NXR333/codex-skills/releases/download/v1.0.1/coursework-diagrams-1.0.1.zip",
+      "manifest_sha256": "edc03ab46b61acd14296c71f221223676149ff59ca0e6284cd7b24baad32b02e",
       "path": "skills/coursework-diagrams",
-      "version": "1.0.0"
+      "version": "1.0.1"
     },
     "coursework-word": {
-      "archive": "coursework-word-1.0.0.zip",
-      "archive_sha256": "51047289507ef8cc5197c5c75ad5a5ff5f322910d88a3aa3dd2cdaae3e6e0576",
-      "archive_url": "https://github.com/NXR333/codex-skills/releases/download/v1.0.0/coursework-word-1.0.0.zip",
-      "manifest_sha256": "8665eff6026e4ebf526915ceb9eadbb7525300e96b2f47eb6712b91c333c5764",
+      "archive": "coursework-word-1.0.1.zip",
+      "archive_sha256": "f0e3036fa7711242552be3ea29d1b540340ac07c465f53d472dad84edd7ceffe",
+      "archive_url": "https://github.com/NXR333/codex-skills/releases/download/v1.0.1/coursework-word-1.0.1.zip",
+      "manifest_sha256": "69233138e89b5d50ddaaf7e85df11b10990eaa68a3d817722d3712d1510d5508",
       "path": "skills/coursework-word",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   }
 }

@@ -11,7 +11,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import skills
-from check_version import REPOSITORY, content_files, digest, inspect_skill, version_tuple
+from check_version import LATEST_RELEASE_URL, REPOSITORY, content_files, digest, display, inspect_skill, version_tuple
 
 
 class VersionSystemTests(unittest.TestCase):
@@ -58,6 +58,23 @@ class VersionSystemTests(unittest.TestCase):
                    "--skill-dir", str(self.folder), "--catalog", str(path)]
         result = subprocess.run(command, env=dict(os.environ, PYTHONIOENCODING="cp1251"), capture_output=True)
         self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_update_link_in_text_and_json(self):
+        first, package = self.release()
+        target = self.root / "installed"
+        skills.install(self.name, target, first, package)
+        second, _ = self.release("1.0.1", "second")
+        state = inspect_skill(target / self.name, second)
+        self.assertEqual(state["status"], "update_available")
+        self.assertEqual(state["latest_release_url"], LATEST_RELEASE_URL)
+        for status in [state, {"skill": self.name, "status": "unavailable"}]:
+            with self.subTest(status=status["status"]):
+                with patch("sys.stdout", new_callable=io.StringIO) as output:
+                    display(status)
+                    self.assertIn(LATEST_RELEASE_URL, output.getvalue())
+                with patch("sys.stdout", new_callable=io.StringIO) as output:
+                    display(status, as_json=True)
+                    self.assertEqual(json.loads(output.getvalue())["latest_release_url"], LATEST_RELEASE_URL)
 
     def test_added_deleted_files_and_cache(self):
         catalog, _ = self.release()

@@ -8,6 +8,7 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 
 REPOSITORY = "NXR333/codex-skills"
+LATEST_RELEASE_URL = f"https://github.com/{REPOSITORY}/releases/latest"
 CATALOG_URL = f"https://raw.githubusercontent.com/{REPOSITORY}/main/catalog.json"
 IGNORE = {"__pycache__", ".git", ".DS_Store"}
 
@@ -74,7 +75,7 @@ def inspect_skill(root, catalog):
     root = Path(root)
     manifest_file = root / "version.json"
     result = {"skill": root.name, "status": "unversioned", "local_version": None,
-              "latest_version": None, "modified_files": []}
+              "latest_version": None, "modified_files": [], "latest_release_url": LATEST_RELEASE_URL}
     if not root.is_dir():
         result["status"] = "not_installed"
         return result
@@ -120,11 +121,13 @@ LABELS = {
 
 
 def display(result, as_json=False):
+    result = dict(result, latest_release_url=LATEST_RELEASE_URL)
     if as_json:
         print(json.dumps(result, ensure_ascii=False, indent=2))
     else:
         local, latest = result.get("local_version"), result.get("latest_version")
         print(f"{result['skill']}: {LABELS[result['status']]} ({local or '-'} -> {latest or '-'})")
+        print(f"Актуальный выпуск: {result['latest_release_url']}")
         for name in result.get("modified_files", []):
             print(f"  {name}")
         if result.get("error"):

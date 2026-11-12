@@ -1,7 +1,7 @@
 {
   "files": {
-    "CHANGELOG.md": "20d8ebc2b0bdd77867fce085e2d8cf04d7d486b45333c9614237c450e63e4fef",
-    "SKILL.md": "ca4a9d52203f56571da0930bffcd7690d21dd03f32dad4fa3a3bde8ed62d4d67",
+    "CHANGELOG.md": "7b7c0819bb4570933caa39806a666f19d7e633bbcc54af4efa494b8ecd9d7d3d",
+    "SKILL.md": "73c95e1bfcf9be73b6c6683c61c1251b54cb72067e9afa860fdec126aee58a60",
     "agents/openai.yaml": "4d7b08b1ad49080ad8baf0fef4300bc4478d12c51bbaa81334a2ab7b19b170a6",
     "assets/LICENSE-Apache-2.0.txt": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
     "assets/repair-requests.drawio": "c97c117140617efa98c9b7e3c2f80abc752b4a7a3330490ac61300b3f9e33812",
@@ -21,7 +21,7 @@
     "references/uml-sequence-guide.pdf": "edd4eb044e4f252df955e0a8ba076e109e1879cdd408d20e4065a9ac7bb970d1",
     "references/uml-state-guide.pdf": "dca38f3c3ddc79a0ccc6a44116d56c901fe5021f82a802493ff13b3e85d2fb1b",
     "references/uml-use-case-guide.pdf": "05701ebfbeb99b4f5ba4d4b3fd8ca9e3ea9b61c37931c75de9dc04a70a0fe6cd",
-    "scripts/check_version.py": "6f09452838b396eaddd75170996331124dad437666cd95b0eb36537475096068",
+    "scripts/check_version.py": "12f0fbf76a1258844c881c78b9252e13a5c4ac1da930c10ecdd98603441c986e",
     "scripts/drawio_builder.py": "d40eb13f6e04fca29ddde922c08d81e9938d0d9c939ed60a112f379a8009973b",
     "scripts/render_drawio.cjs": "0a4000b8b0fb40f6e2803d1273f652ee44e509844403ca662c8f5e3fd90aaea7",
     "scripts/validate_drawio.py": "a6a1a62aad80b1dedbdc6f297c544422c62f60d5ff40e3eba128e549354591cf"
@@ -30,5 +30,5 @@
   "released_at": "2026-11-12",
   "repository": "NXR333/codex-skills",
   "schema": 1,
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
