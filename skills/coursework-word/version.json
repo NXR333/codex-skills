@@ -1,10 +1,10 @@
 {
   "files": {
-    "CHANGELOG.md": "b7f89841098230a3c09eab1769b91cee02089991a8fe30be6fc1bdf4f327bd8d",
-    "SKILL.md": "4c5c5f24d3a845b92356142c771a42c062da7bdd1f72bdfae1c335ac0a0d82af",
+    "CHANGELOG.md": "34e8c0467eeac41e00d53da642e0723c54b09b06fee2024974664517478e922f",
+    "SKILL.md": "ea28e712473bcd40e5b5a8f4d4c189f612125ed683c86ed56c8465d143aa74de",
     "agents/openai.yaml": "c44899c5ca53cfedc6679a4d82cd1398735d650a17639a30da453baea66b1041",
-    "references/checklist.md": "59d79e36b852a86911f8e77dd904f0f4e51f3fad6fc8f3d347221b2e2fcce44d",
-    "references/formatting.md": "6571ada515594b526bcfad8977552685b8eda603756ab79f200a17448f617a79",
+    "references/checklist.md": "367258c1d995be7f824e6313c61a6a748872a955174aaee3bd92fd23baac2020",
+    "references/formatting.md": "4bb0f3ae9914d2ceecb6d02ce0e1214be41bc9345cc2cb6a9cc52c444a47618b",
     "references/project.md": "c5499a64c2d24de4dd3e1fa3355aa96df724dd20fddc597e4933d955b0b18699",
     "references/sources.md": "48d0f18a3a08a92d65b704005a0ffa2f904d4467958db632135a14df9aa4b6a9",
     "references/structure.md": "2e000fb0e941db9341cb37690fad4248b0345a56aceb5172d6d9aefc1703dd10",
@@ -28,5 +28,5 @@
   "released_at": "2026-11-12",
   "repository": "NXR333/codex-skills",
   "schema": 1,
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
