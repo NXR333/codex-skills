@@ -1,16 +1,20 @@
 {
   "files": {
-    "CHANGELOG.md": "34e8c0467eeac41e00d53da642e0723c54b09b06fee2024974664517478e922f",
-    "SKILL.md": "ea28e712473bcd40e5b5a8f4d4c189f612125ed683c86ed56c8465d143aa74de",
+    "CHANGELOG.md": "497b824469b8a5c3d7be50dd4b4cf1aa87b110582101f5f69ed575ed677a6b7a",
+    "SKILL.md": "c314c44c9da75d9c02af4afcbe617146958e9eff4893015024c6608fa460aea0",
     "agents/openai.yaml": "c44899c5ca53cfedc6679a4d82cd1398735d650a17639a30da453baea66b1041",
-    "references/checklist.md": "367258c1d995be7f824e6313c61a6a748872a955174aaee3bd92fd23baac2020",
-    "references/formatting.md": "4bb0f3ae9914d2ceecb6d02ce0e1214be41bc9345cc2cb6a9cc52c444a47618b",
+    "assets/coursework-template.docx": "9913740c1e1da9161fee2b3d96712059b5097b646c68b744dead7d2483bff228",
+    "references/checklist.md": "b9cd645e14caaa543a9078a11d99c7ac3938b2b1c3abe581123c510813afb2c7",
+    "references/formatting.md": "24f13efa199b7557a101415efe0709487d827dfe32b41c4d087c64e8de0c9b90",
     "references/project.md": "c5499a64c2d24de4dd3e1fa3355aa96df724dd20fddc597e4933d955b0b18699",
-    "references/sources.md": "48d0f18a3a08a92d65b704005a0ffa2f904d4467958db632135a14df9aa4b6a9",
-    "references/structure.md": "2e000fb0e941db9341cb37690fad4248b0345a56aceb5172d6d9aefc1703dd10",
+    "references/sources.md": "c24da3ae6ab0835e4c6a51195965e982f13260016bfa128feabdd46f79faaf6d",
+    "references/structure.md": "8e3409a59d2d24c2f4c31b9298d8ca49f6e40932ea9eb3a32e9fbf195f48d0e1",
     "references/technical-specification.md": "56284374aa1125ef01c3fbd428bf76cba460cb06872dfe654264841fa6865f21",
-    "references/templates.md": "54a5390d91094678ee1d018ca41b3b77f4027b47f75d37dbebb66ac203fa2a40",
+    "references/templates.md": "15585f51ea2c81a2b59a4d7270ec0b3e7f9a3c050e9ab48e3d92f7e032765ec0",
+    "references/validation.md": "d8821ae845ff970614d1e243287f73340f89a2db41397b670e54790e1a52e707",
     "scripts/check_version.py": "12f0fbf76a1258844c881c78b9252e13a5c4ac1da930c10ecdd98603441c986e",
+    "scripts/test_validate_docx.py": "9ce14a7dc9dc02c11465074153e2f2e0c3b10d0798dd8a62e52abb9eaae56596",
+    "scripts/validate_docx.py": "2f7e87aa1349b34a1f02b0c60e4c4ff889271000616c3da234d88d9d94a68cf4",
     "sources/Методичка_по_курсовому_МДК_05_02_09_02_07_ИС.docx": "87f8ef08fceb8edd1b2235b977b4a649a81ab99e141c4f5b23a8a2f014d94c64",
     "sources/Новый шрифт для документов/LICENSE-Liberation.txt": "93fed46019c38bbe566b479d22148e2e8a1e85ada614accb0211c37b2c61c19b",
     "sources/Новый шрифт для документов/liberation-fonts-ttf-2.1.5.zip": "cc5827fd240e6dbec6dd4437d129a98e745fb660003fad664e467333dd229c9c",
@@ -25,8 +29,8 @@
     "sources/Установщик Sql.txt": "d1ac1483be50f92749543c6b191ef052af320eef87ab07e060362d3fc7d863e7"
   },
   "name": "coursework-word",
-  "released_at": "2026-11-12",
+  "released_at": "2026-11-15",
   "repository": "NXR333/codex-skills",
   "schema": 1,
-  "version": "1.0.2"
+  "version": "1.1.0"
 }
