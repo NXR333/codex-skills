@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" compressed="false" pages="5">
+  <diagram id="as-is" name="As-Is: ручная регистрация">
+    <mxGraphModel page="1" pageScale="1" grid="0" pageWidth="1600" pageHeight="810" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" vertex="1" parent="1" value="Учебный пример: As-Is: ручная регистрация" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;strokeColor=none;fontSize=23;">
+          <mxGeometry x="40" y="5" width="1500" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="client" vertex="1" parent="1" value="Заказчик" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=swimlane;startSize=35;horizontal=1;collapsible=0;" data-role="bpmn-pool">
+          <mxGeometry x="40" y="60" width="1500" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="bureau" vertex="1" parent="1" value="Бюро переводов" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=swimlane;startSize=35;horizontal=1;collapsible=0;" data-role="bpmn-pool">
+          <mxGeometry x="40" y="160" width="1500" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="manager" vertex="1" parent="bureau" value="Менеджер" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=swimlane;startSize=65;horizontal=0;collapsible=0;" data-role="bpmn-lane">
+          <mxGeometry x="0" y="40" width="1500" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="translator" vertex="1" parent="bureau" value="Переводчик" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=swimlane;startSize=65;horizontal=0;collapsible=0;" data-role="bpmn-lane">
+          <mxGeometry x="0" y="250" width="1500" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="start" vertex="1" parent="manager" value="Заявка&lt;br&gt;получена" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=ellipse;perimeter=ellipsePerimeter;fontSize=16;verticalLabelPosition=bottom;verticalAlign=top;labelPosition=center;spacingTop=7;" data-role="bpmn-start">
+          <mxGeometry x="100" y="80" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="check" vertex="1" parent="manager" value="Проверить&lt;br&gt;полноту заявки" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;rounded=1;arcSize=15;fontSize=16;" data-role="bpmn-task">
+          <mxGeometry x="180" y="60" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="decision" vertex="1" parent="manager" value="X" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=rhombus;fontSize=26;fontSize=16;" data-role="bpmn-xor">
+          <mxGeometry x="420" y="75" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="register" vertex="1" parent="manager" value="Записать заказ&lt;br&gt;в журнал" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;rounded=1;arcSize=15;fontSize=16;" data-role="bpmn-task">
+          <mxGeometry x="520" y="60" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="reject" vertex="1" parent="manager" value="Заявка&lt;br&gt;отклонена" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=ellipse;perimeter=ellipsePerimeter;strokeWidth=3;fontSize=16;verticalLabelPosition=bottom;verticalAlign=top;labelPosition=center;spacingTop=7;verticalLabelPosition=middle;verticalAlign=middle;labelPosition=left;align=right;labelWidth=130;spacingRight=12;spacingTop=0;" data-role="bpmn-end">
+          <mxGeometry x="425" y="160" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="translate" vertex="1" parent="translator" value="Выполнить перевод&lt;br&gt;по файлам заказа" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;rounded=1;arcSize=15;fontSize=16;" data-role="bpmn-task">
+          <mxGeometry x="760" y="60" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="deliver" vertex="1" parent="manager" value="Передать&lt;br&gt;готовый перевод" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;rounded=1;arcSize=15;fontSize=16;" data-role="bpmn-task">
+          <mxGeometry x="1040" y="60" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="end" vertex="1" parent="manager" value="Перевод&lt;br&gt;передан" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=ellipse;perimeter=ellipsePerimeter;strokeWidth=3;fontSize=16;verticalLabelPosition=bottom;verticalAlign=top;labelPosition=center;spacingTop=7;" data-role="bpmn-end">
+          <mxGeometry x="1280" y="80" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="data" vertex="1" parent="manager" value="Журнал заказов" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=note;size=12;fontSize=16;fontSize=14;size=5;spacingTop=5;" data-role="bpmn-data">
+          <mxGeometry x="590" y="160" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="start" target="check" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="check" target="decision" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="Да" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="decision" target="register" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" value="Нет" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=0.50000000;exitY=1.00000000;exitPerimeter=0;entryX=0.50000000;entryY=0.00000000;entryPerimeter=0;" source="decision" target="reject" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="register" target="translate" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry">
+            <Array as="points">
+              <mxPoint x="770" y="300" />
+              <mxPoint x="770" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s6" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="translate" target="deliver" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry">
+            <Array as="points">
+              <mxPoint x="1030" y="510" />
+              <mxPoint x="1030" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s7" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="deliver" target="end" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;dashed=1;dashPattern=1 4;endArrow=open;endFill=0;exitX=0.50000000;exitY=1.00000000;exitPerimeter=0;entryX=0.20000000;entryY=0.00000000;entryPerimeter=0;" source="register" target="data" data-role="bpmn-data-association">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="Заявка" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;endArrow=open;endFill=0;exitX=0.18000000;exitY=1.00000000;exitPerimeter=0;entryX=0.50000000;entryY=0.00000000;entryPerimeter=0;" source="client" target="check" data-role="bpmn-message">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="Готовый перевод" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;endArrow=open;endFill=0;exitX=0.50000000;exitY=0.00000000;exitPerimeter=0;entryX=0.75333333;entryY=1.00000000;entryPerimeter=0;" source="deliver" target="client" data-role="bpmn-message">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="question" vertex="1" parent="manager" value="Заявка полная?" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;strokeColor=none;fontSize=15;">
+          <mxGeometry x="385" y="35" width="125" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="note" vertex="1" parent="1" value="Вымышленный учебный сценарий. Для неполной заявки выбран отказ; реальные правила уточняются при обследовании." style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;strokeColor=none;fontSize=16;">
+          <mxGeometry x="70" y="710" width="1460" height="35" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="to-be" name="To-Be: регистрация в ИС">
+    <mxGraphModel page="1" pageScale="1" grid="0" pageWidth="1600" pageHeight="810" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" vertex="1" parent="1" value="Учебный пример: To-Be: регистрация в ИС" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;strokeColor=none;fontSize=23;">
+          <mxGeometry x="40" y="5" width="1500" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="client" vertex="1" parent="1" value="Заказчик" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=swimlane;startSize=35;horizontal=1;collapsible=0;" data-role="bpmn-pool">
+          <mxGeometry x="40" y="60" width="1500" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="bureau" vertex="1" parent="1" value="Бюро переводов" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=swimlane;startSize=35;horizontal=1;collapsible=0;" data-role="bpmn-pool">
+          <mxGeometry x="40" y="160" width="1500" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="manager" vertex="1" parent="bureau" value="Менеджер" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=swimlane;startSize=65;horizontal=0;collapsible=0;" data-role="bpmn-lane">
+          <mxGeometry x="0" y="40" width="1500" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="translator" vertex="1" parent="bureau" value="Переводчик" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=swimlane;startSize=65;horizontal=0;collapsible=0;" data-role="bpmn-lane">
+          <mxGeometry x="0" y="250" width="1500" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="start" vertex="1" parent="manager" value="Заявка&lt;br&gt;получена" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=ellipse;perimeter=ellipsePerimeter;fontSize=16;verticalLabelPosition=bottom;verticalAlign=top;labelPosition=center;spacingTop=7;" data-role="bpmn-start">
+          <mxGeometry x="100" y="80" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="check" vertex="1" parent="manager" value="Проверить&lt;br&gt;полноту заявки" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;rounded=1;arcSize=15;fontSize=16;" data-role="bpmn-task">
+          <mxGeometry x="180" y="60" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="decision" vertex="1" parent="manager" value="X" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=rhombus;fontSize=26;fontSize=16;" data-role="bpmn-xor">
+          <mxGeometry x="420" y="75" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="register" vertex="1" parent="manager" value="Зарегистрировать&lt;br&gt;заказ в ИС" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;rounded=1;arcSize=15;fontSize=16;" data-role="bpmn-task">
+          <mxGeometry x="520" y="60" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="reject" vertex="1" parent="manager" value="Заявка&lt;br&gt;отклонена" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=ellipse;perimeter=ellipsePerimeter;strokeWidth=3;fontSize=16;verticalLabelPosition=bottom;verticalAlign=top;labelPosition=center;spacingTop=7;verticalLabelPosition=middle;verticalAlign=middle;labelPosition=left;align=right;labelWidth=130;spacingRight=12;spacingTop=0;" data-role="bpmn-end">
+          <mxGeometry x="425" y="160" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="translate" vertex="1" parent="translator" value="Выполнить перевод&lt;br&gt;по терминобазе" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;rounded=1;arcSize=15;fontSize=16;" data-role="bpmn-task">
+          <mxGeometry x="760" y="60" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="deliver" vertex="1" parent="manager" value="Передать&lt;br&gt;готовый перевод" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;rounded=1;arcSize=15;fontSize=16;" data-role="bpmn-task">
+          <mxGeometry x="1040" y="60" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="end" vertex="1" parent="manager" value="Перевод&lt;br&gt;передан" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=ellipse;perimeter=ellipsePerimeter;strokeWidth=3;fontSize=16;verticalLabelPosition=bottom;verticalAlign=top;labelPosition=center;spacingTop=7;" data-role="bpmn-end">
+          <mxGeometry x="1280" y="80" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="data" vertex="1" parent="manager" value="Заказы ИС" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=cylinder;fontSize=16;fontSize=14;spacingTop=5;spacingTop=10;" data-role="bpmn-store">
+          <mxGeometry x="570" y="160" width="140" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="start" target="check" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="check" target="decision" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="Да" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="decision" target="register" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" value="Нет" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=0.50000000;exitY=1.00000000;exitPerimeter=0;entryX=0.50000000;entryY=0.00000000;entryPerimeter=0;" source="decision" target="reject" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="register" target="translate" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry">
+            <Array as="points">
+              <mxPoint x="770" y="300" />
+              <mxPoint x="770" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s6" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="translate" target="deliver" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry">
+            <Array as="points">
+              <mxPoint x="1030" y="510" />
+              <mxPoint x="1030" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s7" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="deliver" target="end" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;dashed=1;dashPattern=1 4;endArrow=open;endFill=0;exitX=0.50000000;exitY=1.00000000;exitPerimeter=0;entryX=0.20000000;entryY=0.00000000;entryPerimeter=0;" source="register" target="data" data-role="bpmn-data-association">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="Заявка" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;endArrow=open;endFill=0;exitX=0.18000000;exitY=1.00000000;exitPerimeter=0;entryX=0.50000000;entryY=0.00000000;entryPerimeter=0;" source="client" target="check" data-role="bpmn-message">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="Готовый перевод" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;endArrow=open;endFill=0;exitX=0.50000000;exitY=0.00000000;exitPerimeter=0;entryX=0.75333333;entryY=1.00000000;entryPerimeter=0;" source="deliver" target="client" data-role="bpmn-message">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="question" vertex="1" parent="manager" value="Заявка полная?" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;strokeColor=none;fontSize=15;">
+          <mxGeometry x="385" y="35" width="125" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="note" vertex="1" parent="1" value="Вымышленный учебный сценарий. Для неполной заявки выбран отказ; реальные правила уточняются при обследовании." style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;strokeColor=none;fontSize=16;">
+          <mxGeometry x="70" y="710" width="1460" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="delta" vertex="1" parent="1" value="Изменение: журнал заменён регистрацией в ИС; переводчик использует общую терминобазу. Сроки и эффект не измерялись." style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;strokeColor=none;fontSize=16;">
+          <mxGeometry x="70" y="750" width="1460" height="35" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="parallel" name="AND: параллельная подготовка">
+    <mxGraphModel page="1" pageScale="1" grid="0" pageWidth="1350" pageHeight="560" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pool" vertex="1" parent="1" value="Учебный пример: параллельная подготовка заказа" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=swimlane;startSize=35;horizontal=1;collapsible=0;" data-role="bpmn-pool">
+          <mxGeometry x="30" y="30" width="1280" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="start" vertex="1" parent="pool" value="Заказ получен" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=ellipse;perimeter=ellipsePerimeter;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=10;" data-role="bpmn-start">
+          <mxGeometry x="60" y="205" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="split" vertex="1" parent="pool" value="+" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=rhombus;fontSize=26;" data-role="bpmn-and">
+          <mxGeometry x="180" y="200" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a" vertex="1" parent="pool" value="Подготовить&lt;br&gt;исходные файлы" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;rounded=1;arcSize=15;" data-role="bpmn-task">
+          <mxGeometry x="350" y="90" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b" vertex="1" parent="pool" value="Подготовить&lt;br&gt;терминологию" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;rounded=1;arcSize=15;" data-role="bpmn-task">
+          <mxGeometry x="350" y="310" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="join" vertex="1" parent="pool" value="+" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=rhombus;fontSize=26;" data-role="bpmn-and">
+          <mxGeometry x="730" y="200" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="task" vertex="1" parent="pool" value="Передать комплект&lt;br&gt;переводчику" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;rounded=1;arcSize=15;" data-role="bpmn-task">
+          <mxGeometry x="890" y="185" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="end" vertex="1" parent="pool" value="Комплект передан" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=ellipse;perimeter=ellipsePerimeter;strokeWidth=3;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=10;" data-role="bpmn-end">
+          <mxGeometry x="1180" y="205" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="start" target="split" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=0.50000000;exitY=0.00000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="split" target="a" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry">
+            <Array as="points">
+              <mxPoint x="235" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=0.50000000;exitY=1.00000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="split" target="b" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry">
+            <Array as="points">
+              <mxPoint x="235" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.50000000;entryY=0.00000000;entryPerimeter=0;" source="a" target="join" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry">
+            <Array as="points">
+              <mxPoint x="785" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.50000000;entryY=1.00000000;entryPerimeter=0;" source="b" target="join" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry">
+            <Array as="points">
+              <mxPoint x="785" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="join" target="task" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;fontSize=15;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="task" target="end" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="note" vertex="1" parent="1" value="Сходящийся AND ожидает обе ветви. Это самостоятельный пример приёма, а не третья стадия As-Is / To-Be." style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;strokeColor=none;fontSize=16;">
+          <mxGeometry x="40" y="510" width="1250" height="35" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="message-timer" name="Сообщения и таймер">
+    <mxGraphModel page="1" pageScale="1" grid="0" pageWidth="1650" pageHeight="720" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" vertex="1" parent="1" value="Учебный пример: запрос, ожидание ответа и задержка" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;strokeColor=none;fontSize=23;">
+          <mxGeometry x="40" y="5" width="1540" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="external" vertex="1" parent="1" value="Согласующее лицо" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=swimlane;startSize=40;horizontal=1;collapsible=0;" data-role="bpmn-pool">
+          <mxGeometry x="40" y="70" width="1540" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="pool" vertex="1" parent="1" value="Обработка согласования" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=swimlane;startSize=40;horizontal=1;collapsible=0;" data-role="bpmn-pool">
+          <mxGeometry x="40" y="190" width="1540" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="start" vertex="1" parent="pool" value="Проект готов" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=mxgraph.bpmn.event;perimeter=ellipsePerimeter;fontSize=17;verticalLabelPosition=bottom;verticalAlign=top;labelWidth=190;spacingTop=12;outline=standard;symbol=general;" data-role="bpmn-start" data-event="none">
+          <mxGeometry x="60" y="140" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="send" vertex="1" parent="pool" value="Запрос отправлен" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=mxgraph.bpmn.event;perimeter=ellipsePerimeter;fontSize=17;verticalLabelPosition=bottom;verticalAlign=top;labelWidth=190;spacingTop=12;outline=throwing;symbol=message;" data-role="bpmn-intermediate" data-event="message-throw">
+          <mxGeometry x="260" y="140" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="receive" vertex="1" parent="pool" value="Ответ получен" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=mxgraph.bpmn.event;perimeter=ellipsePerimeter;fontSize=17;verticalLabelPosition=bottom;verticalAlign=top;labelWidth=190;spacingTop=12;outline=catching;symbol=message;" data-role="bpmn-intermediate" data-event="message-catch">
+          <mxGeometry x="560" y="140" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="timer" vertex="1" parent="pool" value="Через 2 часа" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=mxgraph.bpmn.event;perimeter=ellipsePerimeter;fontSize=17;verticalLabelPosition=bottom;verticalAlign=top;labelWidth=190;spacingTop=12;outline=catching;symbol=timer;" data-role="bpmn-intermediate" data-event="timer">
+          <mxGeometry x="860" y="140" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="end" vertex="1" parent="pool" value="Заказ передан" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=mxgraph.bpmn.event;perimeter=ellipsePerimeter;fontSize=17;verticalLabelPosition=bottom;verticalAlign=top;labelWidth=190;spacingTop=12;outline=end;symbol=general;" data-role="bpmn-end" data-event="none">
+          <mxGeometry x="1400" y="140" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task" vertex="1" parent="pool" value="Передать заказ&lt;br&gt;в работу" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;rounded=1;arcSize=15;" data-role="bpmn-task">
+          <mxGeometry x="1060" y="120" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="start" target="send" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="send" target="receive" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="receive" target="timer" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="timer" target="task" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="task" target="end" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="Проект на согласование" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;endArrow=open;endFill=0;exitX=0.50000000;exitY=0.00000000;exitPerimeter=0;entryX=0.18181818;entryY=1.00000000;entryPerimeter=0;" source="send" target="external" data-role="bpmn-message">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="Согласование" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;endArrow=open;endFill=0;exitX=0.37662338;exitY=1.00000000;exitPerimeter=0;entryX=0.50000000;entryY=0.00000000;entryPerimeter=0;" source="external" target="receive" data-role="bpmn-message">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="note" vertex="1" parent="1" value="После запроса процесс ждёт ответ. Затем таймер задерживает продолжение на 2 часа от момента получения ответа." style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;strokeColor=none;fontSize=18;">
+          <mxGeometry x="60" y="610" width="1500" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="note2" vertex="1" parent="1" value="Вымышленный учебный пример по разделам 5–6 «ВИС.docx». Задержка не обозначает предельный срок согласования." style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;strokeColor=none;fontSize=17;">
+          <mxGeometry x="60" y="655" width="1500" height="35" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="rework" name="XOR: возврат на доработку">
+    <mxGraphModel page="1" pageScale="1" grid="0" pageWidth="1450" pageHeight="630" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pool" vertex="1" parent="1" value="Учебный пример: проверка документа и доработка" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=swimlane;startSize=40;horizontal=1;collapsible=0;" data-role="bpmn-pool">
+          <mxGeometry x="30" y="30" width="1390" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="start" vertex="1" parent="pool" value="Задание получено" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=mxgraph.bpmn.event;perimeter=ellipsePerimeter;fontSize=17;verticalLabelPosition=bottom;verticalAlign=top;labelWidth=190;spacingTop=12;outline=standard;symbol=general;" data-role="bpmn-start">
+          <mxGeometry x="60" y="200" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="merge" vertex="1" parent="pool" value="X" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=rhombus;fontSize=26;" data-role="bpmn-xor">
+          <mxGeometry x="180" y="195" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="prepare" vertex="1" parent="pool" value="Подготовить&lt;br&gt;проект документа" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;rounded=1;arcSize=15;" data-role="bpmn-task">
+          <mxGeometry x="350" y="180" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="check" vertex="1" parent="pool" value="Проверить&lt;br&gt;проект документа" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;rounded=1;arcSize=15;" data-role="bpmn-task">
+          <mxGeometry x="670" y="180" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="choice" vertex="1" parent="pool" value="X" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=rhombus;fontSize=26;" data-role="bpmn-xor">
+          <mxGeometry x="1000" y="195" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="end" vertex="1" parent="pool" value="Документ принят" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;shape=mxgraph.bpmn.event;perimeter=ellipsePerimeter;fontSize=17;verticalLabelPosition=bottom;verticalAlign=top;labelWidth=190;spacingTop=12;outline=end;symbol=general;" data-role="bpmn-end">
+          <mxGeometry x="1230" y="200" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="question" vertex="1" parent="pool" value="Есть ошибки?" style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;strokeColor=none;fontSize=17;">
+          <mxGeometry x="965" y="145" width="130" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="start" target="merge" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="merge" target="prepare" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="prepare" target="check" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" value="" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="check" target="choice" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" value="Нет" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;exitX=1.00000000;exitY=0.50000000;exitPerimeter=0;entryX=0.00000000;entryY=0.50000000;entryPerimeter=0;" source="choice" target="end" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry" />
+        </mxCell>
+        <mxCell id="s6" value="Да — доработать" edge="1" parent="1" style="html=1;fontFamily=Arial;fontColor=#000000;noEdgeStyle=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endSize=7;endFill=1;fontSize=17;labelBackgroundColor=#FFFFFF;exitX=0.50000000;exitY=1.00000000;exitPerimeter=0;entryX=0.50000000;entryY=1.00000000;entryPerimeter=0;" source="choice" target="merge" data-role="bpmn-sequence">
+          <mxGeometry relative="1" x="0" as="geometry">
+            <Array as="points">
+              <mxPoint x="1055" y="420" />
+              <mxPoint x="235" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" vertex="1" parent="1" value="Возврат проходит через объединяющий XOR. После исправления документ снова проверяется; завершение — только без ошибок." style="html=1;fontFamily=Arial;fontColor=#000000;rect;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;strokeColor=none;fontSize=18;">
+          <mxGeometry x="45" y="550" width="1360" height="45" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

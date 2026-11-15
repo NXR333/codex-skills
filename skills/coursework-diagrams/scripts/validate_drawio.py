@@ -11,7 +11,7 @@ from xml.etree import ElementTree as ET
 import zlib
 
 
-KINDS = {'idef-context', 'idef-decomp', 'dfd', 'dfd-gane-sarson', 'sequence', 'use-case'}
+KINDS = {'idef-context', 'idef-decomp', 'dfd', 'dfd-gane-sarson', 'sequence', 'use-case', 'bpmn'}
 PREFIX = re.compile(r'^[IOCM]\d+\b[\s.:–-]*', re.IGNORECASE)
 ACTIVITY = re.compile(r'[AА]\d+')
 PROCESS = re.compile(r'p\d+(?:[._]\d+)*')
@@ -50,6 +50,7 @@ def read_pages(path):
 class Page:
     def __init__(self, name, model):
         self.name = name
+        self.model = model
         self.cells = {}
         self.errors = []
         root = model.find('root')
@@ -94,6 +95,13 @@ class Page:
         if not self.cells:
             self.fail('empty model')
         for key, (_, cell) in self.cells.items():
+            seen, current = set(), key
+            while current in self.cells:
+                if current in seen:
+                    self.fail(f'{key}: cyclic parent hierarchy')
+                    break
+                seen.add(current)
+                current = self.cells[current][1].get('parent')
             for attr in ('parent', 'source', 'target'):
                 other = cell.get(attr)
                 if other and other not in self.cells:
@@ -104,6 +112,14 @@ class Page:
             if geometry is None:
                 self.fail(f'{key}: missing geometry')
                 continue
+            if cell.get('vertex') == '1':
+                for dimension in ('width', 'height'):
+                    try:
+                        value = float(geometry.get(dimension, 'nan'))
+                        if not isfinite(value) or value <= 0:
+                            raise ValueError
+                    except ValueError:
+                        self.fail(f'{key}: vertex {dimension} must be positive')
             for point in geometry.iter():
                 for field in ('x', 'y', 'width', 'height'):
                     value = point.get(field)
@@ -120,7 +136,40 @@ class Page:
                     if not cell.get(end) and geometry.find(f'mxPoint[@as="{end}Point"]') is None:
                         self.fail(f'{key}: missing {end} cell or point')
 
+    def monochrome(self):
+        """Check explicit styles. Inherited/theme/image appearance still needs a render."""
+        aliases = {'black': '#000000', '#000': '#000000', 'white': '#ffffff', '#fff': '#ffffff'}
+        allowed = {
+            'fontColor': {'#000000'}, 'strokeColor': {'#000000', 'none'},
+            'fillColor': {'#000000', '#ffffff', 'none'},
+            'labelBackgroundColor': {'#ffffff', 'none'},
+            'labelBorderColor': {'#000000', 'none'},
+            'swimlaneFillColor': {'#ffffff', 'none'},
+            'swimlaneLineColor': {'#000000', 'none'},
+        }
+        background = self.model.get('background')
+        if background and aliases.get(background.lower(), background.lower()) not in {'#ffffff', 'none'}:
+            self.fail('page background must be white or transparent')
+        for key in self.cells:
+            style = self.style(key)
+            for prop, permitted in allowed.items():
+                if prop in style:
+                    value = style[prop].lower()
+                    if aliases.get(value, value) not in permitted:
+                        self.fail(f'{key}: non-monochrome {prop}={style[prop]}')
+            if style.get('shadow', '0') != '0':
+                self.fail(f'{key}: shadows are forbidden')
+            if style.get('gradientColor', 'none').lower() != 'none':
+                self.fail(f'{key}: gradients are forbidden')
+            raw = self.cells[key][0].get('label', self.cells[key][1].get('value', ''))
+            for color in re.findall(r'(?<![-\w])(?:color\s*[:=]\s*[\"\']?)(#[0-9a-fA-F]+|[a-zA-Z]+)', unescape(raw), re.I):
+                if aliases.get(color.lower(), color.lower()) != '#000000':
+                    self.fail(f'{key}: non-black HTML text color {color}')
+
     def profile(self, kind):
+        if kind == "bpmn":
+            from bpmn_profile import check
+            check(self)
         if kind.startswith(('idef-', 'dfd')):
             for key in self.edges:
                 if PREFIX.match(self.edge_label(key)):
@@ -347,11 +396,15 @@ def main():
                         help='Section 8 check on comma-separated decomposition page indices')
     parser.add_argument('--idef-levels', metavar='PAGES',
                         help='Section 7 check on comma-separated IDEF0 decomposition page indices')
+    parser.add_argument('--monochrome', action='store_true',
+                        help='Check explicit black/white styles, gradients and shadows')
     args = parser.parse_args()
     try:
         pages = [Page(name, model) for name, model in read_pages(args.file)]
         for page in pages:
             page.structural()
+            if args.monochrome:
+                page.monochrome()
         for spec in args.kind:
             index, kind = pair(spec,'=')
             if kind not in KINDS:

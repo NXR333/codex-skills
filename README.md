@@ -5,7 +5,7 @@
 | Скилл | Версия | Назначение |
 |---|---|---|
 | coursework-word | 1.0.2 | Пояснительная записка Word по методичкам колледжа |
-| coursework-diagrams | 1.0.1 | IDEF0, DFD и UML в Draw.io |
+| coursework-diagrams | 1.1.0 | IDEF0, DFD, BPMN и UML в Draw.io |
 
 ## Установка
 
